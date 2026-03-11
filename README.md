@@ -51,7 +51,7 @@ Production-ready Tailscale VPN client for the ESP32 platform with WiFi and 4G ce
 - ESP-IDF v5.0 or later (tested with v5.3)
 - ESP32 with WiFi (ESP32-S3 with PSRAM recommended)
 - Tailscale account with auth key (generate at https://login.tailscale.com/admin/settings/keys)
-- For cellular: SIMCOM SIM7600/SIM7670 modem + active SIM card
+- For cellular: ESP32-compatible 4G cellular module (e.g., SIM7600, SIM7670) + active SIM card
 
 ## Hardware
 
@@ -536,7 +536,7 @@ MicroLink V2 Configuration
 
 | Option | Default | Description |
 |--------|---------|-------------|
-| `ML_ENABLE_CELLULAR` | `n` | Enable 4G cellular modem support (SIMCOM SIM7600/SIM7670 via UART AT commands + PPP) |
+| `ML_ENABLE_CELLULAR` | `n` | Enable 4G cellular modem support (ESP32-compatible modules via UART AT commands + PPP) |
 | `ML_CELLULAR_BOARD` | Waveshare | Board preset: Waveshare SIM7600X (TX=43,RX=44), LILYGO T-SIM7670G (TX=11,RX=10,PWRKEY=18), or Custom |
 | `ML_CELLULAR_TX_PIN` | `43` | ESP32 TX → modem RXD GPIO |
 | `ML_CELLULAR_RX_PIN` | `44` | ESP32 RX ← modem TXD GPIO |
